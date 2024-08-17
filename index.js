@@ -1,5 +1,5 @@
 // Playlist
-var playList = [
+const playList = [
     { author: "LED ZEPPELIN", song: "STAIRWAY TO HEAVEN" },
     { author: "QUEEN", song: "BOHEMIAN RHAPSODY" },
     { author: "LYNYRD SKYNYRD", song: "FREE BIRD" },
@@ -10,10 +10,10 @@ var playList = [
     { author: "METALLICA", song: "ENTER SANDMAN" }
 ];
 
-var playlistElement = document.querySelector('#playlist tbody');
+const playlistElement = document.querySelector('#playlist tbody');
 
 playList.forEach(function(song, index) {
-    var row = document.createElement('tr');
+    const row = document.createElement('tr');
     row.classList.add('product');
     row.innerHTML = `
         <td>${index + 1}</td>
@@ -24,10 +24,10 @@ playList.forEach(function(song, index) {
 });
 
 // Modal window
-var modal = document.getElementById("modal");
-var openModalBtn = document.getElementById("openModalBtn");
-var closeModalBtn = document.getElementById("closeModalBtn");
-var closeModalBtn2 = document.getElementById("closeModalBtn2");
+const modal = document.getElementById("modal");
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const closeModalBtn2 = document.getElementById("closeModalBtn2");
 
 // Open the modal
 openModalBtn.onclick = function() {
@@ -52,8 +52,8 @@ window.onclick = function(event) {
 }
 
 // Traffic light
-var lights = document.querySelectorAll('.light');
-var currentIndex = 0;
+const lights = document.querySelectorAll('.light');
+let currentIndex = 0;
 
 document.getElementById('changeLightBtn').addEventListener('click', function() {
     lights[currentIndex].classList.remove('active');
